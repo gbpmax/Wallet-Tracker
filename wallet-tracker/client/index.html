@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3 Wallet Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Web3 Wallet Tracker</h1>
+      <p>Track your multi‑chain portfolio like a pro.</p>
+    </div>
+  </header>
+  <main class="container">
+    <section class="form-section">
+      <h2>Lookup wallet</h2>
+      <p>Enter a wallet address and select which blockchains you want to query.</p>
+      <form id="lookup-form">
+        <div class="form-group">
+          <label for="address">Wallet Address</label>
+          <input type="text" id="address" name="address" placeholder="0x... or Solana address" required />
+        </div>
+        <div class="form-group network-options">
+          <label>Select networks:</label>
+          <div class="checkboxes">
+            <label><input type="checkbox" name="network" value="ethereum" checked /> Ethereum</label>
+            <label><input type="checkbox" name="network" value="polygon" /> Polygon</label>
+            <label><input type="checkbox" name="network" value="binance" /> Binance</label>
+            <label><input type="checkbox" name="network" value="base" /> Base</label>
+            <label><input type="checkbox" name="network" value="solana" /> Solana</label>
+          </div>
+        </div>
+        <button type="submit" class="btn">Fetch Data</button>
+      </form>
+    </section>
+    <section id="results"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
